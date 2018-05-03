@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Provider } from 'react-redux'
+import { Route } from 'react-router-dom'
 import HelloWorldContainer from '../containers/HelloWorldContainer'
+import Test from '../components/Test'
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <div>
-        <HelloWorldContainer />
+        <Route exact path="/" component={HelloWorldContainer} />
+        <Route path="/test" component={Test} />
       </div>
     )
   }
